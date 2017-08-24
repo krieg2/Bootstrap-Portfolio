@@ -20,7 +20,6 @@ header {
   padding: 0;
   margin-bottom: 30px;
   padding-bottom: 0;
-  height: 90px;
   min-height: 90px;
   border-bottom: 3px solid;
   border-color: #dddddd;
@@ -103,13 +102,6 @@ textarea {
   border-color: #dddddd;
 }
 
-#contactContainer {
-  width: 208px;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 0;
-}
-
 #nameTag {
   color: #ffffff;
   background: #4aaaa5;
@@ -118,16 +110,15 @@ textarea {
   width: 250px;
   padding: 0;
   margin: 0;
+  margin-left: 15px;
   text-align: center;
-  float: left;
 }
 
 #headerMenu {
-  margin-right: 60px;
-  width: 50%;
+  float: left;
+  margin-right: 600px;
   height: 90px;
-  float: right;
-  text-align: right;
+  line-height: 90px;
 }
 
 .headerLink {
@@ -139,6 +130,10 @@ textarea {
 }
 
 .headerCol {
+  margin-top: 42px;
+  height: 18px;
+  max-height: 18px;
+  line-height: 90px;
   border-right: 1px solid;
   border-color: #cccccc;
 }
@@ -167,12 +162,12 @@ textarea {
 .wrapper {
   flex: 1 0 auto;
 }
-
+/*
 .container {
   width: 960px;
   margin: 0 auto;
 }
-
+*/
 .iconLink {
   width: 62px;
   height: 62px;
@@ -192,16 +187,27 @@ textarea {
 
 #main-bio {
   width: 628px;
-  margin-right: 20px;
+  /*margin-right: 40px;*/
   margin-bottom: 40px;
 }
 
+#contactContainer {
+  min-width: 210px;
+  margin: 0 auto;
+  /*margin-left: 20px;
+  margin-right: 20px;*/
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+}
+
 #contact-info {
-  min-width: 248px;
+  min-width: 270px;
   height: 200px;
   max-height: 200px;
-  margin-left: 20px;
+  /*margin-left: 20px;*/
   margin-bottom: 40px;
+  text-align: left;
 }
 
 #bio-image {
@@ -255,3 +261,41 @@ textarea {
   z-index: 3;
 }
 
+@media screen and (max-width: 640px){
+
+  header {
+    position: static;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 154px;
+  }
+
+  #nameTag {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .headerLink {
+    line-height: 64px;
+  }
+
+  .headerCol {
+    margin: 30px 30px 30px 30px;
+    height: 18px;
+    max-height: 18px;
+    line-height: 154px;
+    border-right: 1px solid;
+    border-color: #cccccc;
+  }
+
+  #headerMenu {
+    margin: 0 auto;
+    width: 100%;
+    height: 64px;
+    text-align: center;
+  }
+
+}
