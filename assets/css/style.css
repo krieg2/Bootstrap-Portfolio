@@ -35,7 +35,11 @@ h1, h2 {
 }
 
 h2 {
-  margin: 30px 0px 35px 20px;
+  margin: 30px 10px 35px 20px;
+  padding-bottom: 20px;
+  margin-bottom: 15px; 
+  border-bottom: 2px solid;
+  border-color: #dddddd;
 }
 
 h3 {
@@ -73,9 +77,10 @@ textarea {
 }
 
 #submitButton {
+  border-radius:0;
   margin: 10px 0 10px 0;
   background: #4aaaa5;
-  border:0 none;
+  border: 1px solid transparent;
   color: #ffffff;
   width: 117px;
   height:42px;
@@ -86,15 +91,6 @@ textarea {
   padding: 0;
   margin: 20px;
   text-align: left;
-  border-bottom: 3px solid;
-  border-color: #dddddd;
-}
-
-#headerContainer {
-  background-color: #ffffff;
-  width: 960px;
-  height: 90px;
-  margin: 0 auto;
   border-bottom: 3px solid;
   border-color: #dddddd;
 }
@@ -160,12 +156,6 @@ textarea {
   flex: 1 0 auto;
 }
 
-/*
-.container {
-  width: 960px;
-  margin: 0 auto;
-}
-*/
 .iconLink {
   width: 62px;
   height: 62px;
@@ -184,16 +174,13 @@ textarea {
 }
 
 #main-bio {
-  width: 628px;
-  /*margin-right: 40px;*/
+  padding-right: 20px;
   margin-bottom: 40px;
 }
 
 #contactContainer {
   min-width: 210px;
   margin: 0 auto;
-  /*margin-left: 20px;
-  margin-right: 20px;*/
   padding-left: 20px;
   padding-right: 20px;
   text-align: left;
@@ -203,7 +190,7 @@ textarea {
   min-width: 270px;
   height: 200px;
   max-height: 200px;
-  /*margin-left: 20px;*/
+  margin: 0;
   margin-bottom: 40px;
   text-align: left;
 }
@@ -221,25 +208,25 @@ textarea {
 
 .portfolio-image-container {
   position: relative;
-  margin: 20px;
-  margin-bottom: 36px;
-  width: 274px;
-  height: 205px;
+  margin: 10px;
+  margin-bottom: 16px;
+  min-width: 220px;
+  min-height: 205px;
   float: left;
   z-index: 1;
 }
 
 .portfolio-image-right {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .portfolio-image-left {
-  margin-left: 20px;
+  margin-left: 5px;
 }
 
 .portfolio-image {
-  width: 274px;
-  height: 205px;
+  /*width: 274px;
+  height: 205px;*/
   z-index: 2;
 }
 
@@ -259,12 +246,47 @@ textarea {
   z-index: 3;
 }
 
+@media screen and (max-width: 992px){
+
+  #headerMenu {
+    float: left;
+    margin-right: 300px;
+  }
+
+  #bio-image {
+    width: 298px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px){
+
+  #headerMenu {
+    float: left;
+    margin-right: 0;
+  }
+
+  #bio-image {
+    width: 260px;
+    height: auto;
+  }
+}
+
 @media screen and (max-width: 576px){
 
   header {
     position: static;
     width: 100%;
     min-height: 154px;
+  }
+
+  #main-bio, #contact-info {
+    margin: 20px;
+  }
+
+  #bio-image {
+    width: 488px;
+    height: auto;
   }
 
   #nameTag {
